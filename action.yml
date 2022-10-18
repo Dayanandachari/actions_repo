@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
     
-    - run: 
+    - run: |
           pwd
           ls -aR
           echo " running from action test from the Action_repo "
