@@ -1,0 +1,14 @@
+name: 'test action'
+description: 'testing the actions '
+
+runs:
+  using: "composite"
+  steps:
+    
+    - run: 
+          pwd
+          ls -aR
+          echo " running from action test from the Action_repo "
+      shell: bash
+   
+   
