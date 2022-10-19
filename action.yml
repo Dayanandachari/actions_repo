@@ -15,7 +15,7 @@ runs:
           curl \
           -X POST \
           -H "Accept: application/vnd.github+json" \
-          -H "Authorization: token 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" \
+          -H "Authorization: token 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" \
           https://api.github.com/repos/Dayanandachari/Github_action_repo/issues/5/comments \
           -d '{"body":"**PR Message Testing ** "}'
       shell: bash
