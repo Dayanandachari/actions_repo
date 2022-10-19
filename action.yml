@@ -16,7 +16,7 @@ runs:
           -X POST \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: token $GITHUB_TOKEN " \
-          https://api.github.com/repos/Dayanandachari/Github_action_repo/issues/$PR_NUMBER/comments \
+          https://api.github.com/repos/$OWNER/Github_action_repo/issues/$PR_NUMBER/comments \
           -d '{"body":"**Testing** 123"}'
       shell: bash
    
