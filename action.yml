@@ -4,11 +4,20 @@ description: 'testing the actions '
 runs:
   using: "composite"
   steps:
-    
-    - run: |
-          pwd
-          ls -aR
-          echo " running from action test from the Action_repo "  
+  
+    - name: Pr message test 
+      id: pr_test
+      #if: ${{ failure() && steps.pr_test.conclusion == 'failure' }}
+      # if: ${{ success() }}
+      env:
+       PR_URL: "${{ github.event.pull_request.url }}"
+      run: |        
+          curl \
+          -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: token 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" \
+          https://api.github.com/repos/Dayanandachari/Github_action_repo/issues/5/comments \
+          -d '{"body":"**PR Message Testing ** "}'
       shell: bash
    
    
