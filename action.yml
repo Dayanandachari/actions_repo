@@ -17,7 +17,7 @@ runs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: token $GITHUB_TOKEN " \
           https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/comments \
-          -d '{"body":"$Custom_message"}'
+          -d '{"body":"Custom_message"}'
       shell: bash
    
    
