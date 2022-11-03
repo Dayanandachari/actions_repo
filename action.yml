@@ -1,5 +1,21 @@
 name: 'test action'
 description: 'testing the actions '
+inputs:
+  PR_number:
+    description: Repo PR number 
+    required: true
+  Repo_owner:
+    description: Owner name
+    required: true
+  Repo_name:
+    description: repo  name
+    required: true
+  
+  Message:
+    description: pr message
+    required: true
+  
+  
 
 runs:
   using: "composite"
@@ -9,15 +25,14 @@ runs:
       id: pr_test
       #if: ${{ failure() && steps.pr_test.conclusion == 'failure' }}
       env:
-       PR_NUMBER: "${{ github.event.number }}"
        GITHUB_TOKEN: ${{ github.token }}
       run: |        
           curl \
           -X POST \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: token $GITHUB_TOKEN " \
-          https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/comments \
-          -d '{"body":"Custom_message"}'
+          https://api.github.com/repos/${{ inputs.Repo_owner }}/${{ inputs.Repo_name }}/issues/${{ inputs.PR_number}}/comments \
+          -d '{"body":"${{ inputs.Message }}"}'
       shell: bash
    
    
