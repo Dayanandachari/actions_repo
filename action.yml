@@ -42,7 +42,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ github.token }}
     - ${{ inputs.PR_number }}
     - ${{ inputs.app_file }}
     - ${{ inputs.Repo_owner }}
