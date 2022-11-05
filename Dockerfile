@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM ubuntu
 RUN mkdir app
 #RUN apk add bash
 WORKDIR /app
