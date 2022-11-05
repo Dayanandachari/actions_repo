@@ -1,7 +1,8 @@
 FROM node:18.3.0-alpine
-
-RUN apk add bash
-
+RUN mkdir app
+#RUN apk add bash
+WORKDIR /app
+COPY . /app
 
 RUN curl \
         -X POST \
