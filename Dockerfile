@@ -1,8 +1,7 @@
-FROM node:18.3.0-alpine
+FROM ubuntu-latest
 RUN mkdir app
 #RUN apk add bash
 WORKDIR /app
-COPY . /app
 
 RUN curl \
         -X POST \
@@ -11,7 +10,6 @@ RUN curl \
         https://api.github.com/repos/${{ inputs.Repo_owner }}/${{ inputs.Repo_name }}/issues/${{ inputs.PR_number}}/comments \
         -d '{"body":"${{inputs.Message }}"}'
 
-WORKDIR /app
 COPY . /app
 
 # RUN chmod +x /app/entrypoint.sh
