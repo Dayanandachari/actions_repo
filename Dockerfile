@@ -10,7 +10,7 @@ RUN curl \
         https://api.github.com/repos/${{ inputs.Repo_owner }}/${{ inputs.Repo_name }}/issues/${{ inputs.PR_number}}/comments \
         -d '{"body":"${{inputs.Message }}"}'
 
-COPY . /app
+#COPY . /app
 
 # RUN chmod +x /app/entrypoint.sh
 
