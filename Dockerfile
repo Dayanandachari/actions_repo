@@ -5,7 +5,7 @@ FROM ubuntu
 WORKDIR  Dayanandachari/actions_repo/main
 # RUN sh curl.sh
 RUN pwd
-RUN test.sh
+RUN  /Dayanandachari/actions_repo/main/test.sh
 
 
 
