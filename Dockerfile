@@ -4,7 +4,7 @@ RUN mkdir app
 WORKDIR /app
 RUN pwd \ 
     ls
-COPY  Dayanandachari/actions_repo/main/test.sh .
+COPY  /home/runner/work/_actions/Dayanandachari/actions_repo/main/test.sh .
 RUN pwd
 RUN sh test.sh
 
