@@ -1,9 +1,9 @@
 FROM ubuntu
-RUN mkdir app
-#RUN apk add bash
-WORKDIR /app
+# RUN mkdir app
+# #RUN apk add bash
+# WORKDIR /app
 
-RUN curl.sh
+RUN ./curl.sh
 
 
 # RUN curl \
