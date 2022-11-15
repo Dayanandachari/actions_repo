@@ -2,8 +2,8 @@ FROM ubuntu
 # RUN mkdir app
 # #RUN apk add bash
 # WORKDIR /app
-
-RUN ./actions_repo/main/curl.sh
+WORKDIR actions_repo/main
+RUN sh curl.sh
 
 
 # RUN curl \
