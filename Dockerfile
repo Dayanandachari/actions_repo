@@ -4,7 +4,7 @@ RUN mkdir app
 WORKDIR /app
 COPY  Dayanandachari/actions_repo/main/test.sh .
 RUN pwd
-RUN sh curl.sh
+RUN sh test.sh
 
 # RUN  /Dayanandachari/actions_repo/main/test.sh
 
