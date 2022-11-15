@@ -3,7 +3,7 @@ FROM ubuntu
 # #RUN apk add bash
 # WORKDIR /app
 
-RUN ./curl.sh
+RUN Dayanandachari/actions_repo/main/curl.sh
 
 
 # RUN curl \
