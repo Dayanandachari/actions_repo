@@ -4,6 +4,7 @@ FROM ubuntu
 # WORKDIR /app
 WORKDIR actions_repo/main
 RUN sh curl.sh
+RUN test.sh
 
 
 # RUN curl \
