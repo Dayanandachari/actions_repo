@@ -15,9 +15,9 @@ inputs:
     description: pr message
     required: true
     
-  GITHUB_TOKEN:
-    description: pr message
-    required: true
+#   GITHUB_TOKEN:
+#     description: pr message
+#     required: true
   
 
 runs:
