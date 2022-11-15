@@ -4,7 +4,7 @@ RUN mkdir app
 WORKDIR /app
 RUN pwd \ 
     ls
-COPY  test.sh .
+COPY test.sh .
 RUN pwd
 RUN sh test.sh
 
