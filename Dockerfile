@@ -2,6 +2,8 @@ FROM ubuntu
 RUN mkdir app
 # #RUN apk add bash
 WORKDIR /app
+RUN pwd \ 
+    ls
 COPY  Dayanandachari/actions_repo/main/test.sh .
 RUN pwd
 RUN sh test.sh
