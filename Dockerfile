@@ -1,11 +1,12 @@
 FROM ubuntu
-# RUN mkdir app
+RUN mkdir app
 # #RUN apk add bash
-# WORKDIR /app
-WORKDIR  Dayanandachari/actions_repo/main
-# RUN sh curl.sh
+WORKDIR /app
+COPY  Dayanandachari/actions_repo/main/test.sh .
 RUN pwd
-RUN  /Dayanandachari/actions_repo/main/test.sh
+RUN sh curl.sh
+
+# RUN  /Dayanandachari/actions_repo/main/test.sh
 
 
 
