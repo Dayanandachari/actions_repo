@@ -3,7 +3,7 @@ FROM ubuntu
 # #RUN apk add bash
 # WORKDIR /app
 
-RUN actions_repo/curl.sh
+RUN ./curl.sh
 
 
 # RUN curl \
