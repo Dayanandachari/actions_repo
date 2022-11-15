@@ -2,7 +2,7 @@ FROM ubuntu
 # RUN mkdir app
 # #RUN apk add bash
 # WORKDIR /app
-WORKDIR actions_repo/main
+WORKDIR  Dayanandachari/actions_repo/main
 # RUN sh curl.sh
 RUN pwd
 RUN test.sh
